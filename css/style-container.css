@@ -17,12 +17,12 @@ body{
 
 @font-face{
     font-family: 'Varela Round';
-    src: url('../../../public/assets/fonts/VarelaRound-Regular.ttf') format('truetype');
+    src: url('./public/assets/fonts/VarelaRound-Regular.ttf') format('truetype');
 }
 
 @font-face{
     font-family: 'BungeeSpice';
-    src: url('../../../public/assets/fonts/BungeeSpice-Regular.ttf') format('truetype');
+    src: url('./public/assets/fonts/BungeeSpice-Regular.ttf') format('truetype');
 }
 
 :root {
