@@ -3,7 +3,7 @@ export function criarContainerGeral() {
     containerGeral.classList.add('container__geral');
     return containerGeral;
 }
-export function criarElementoSaudacao() {
+export function criarElementoSobre() {
     const sectionSobre = document.createElement('section');
     const cardSobre = document.createElement('div');
     sectionSobre.classList.add('container__sobre');
@@ -49,4 +49,18 @@ export function criarElementoSaudacao() {
         `;
     sectionSobre.appendChild(cardSobre);
     return sectionSobre;
+}
+export function criarElementoProjetos() {
+    const sectionProjetos = document.createElement('section');
+    const cardProjetos = document.createElement('div');
+    sectionProjetos.classList.add('container__projetos');
+    cardProjetos.classList.add('card__projetos');
+    sectionProjetos.innerHTML = `
+        <img src="" alt="projetos" id="imagem__projetos"/>
+    `;
+    cardProjetos.innerHTML = `
+        <h1>Projetos</h1>
+    `;
+    sectionProjetos.appendChild(cardProjetos);
+    return sectionProjetos;
 }
