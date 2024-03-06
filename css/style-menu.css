@@ -1,0 +1,58 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: var(--tamanho-font-menu);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    min-width: 950px;
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.menu img{
+    width: 80px;
+    height: 80px;
+}
+
+.menu img:hover{
+    cursor: pointer;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    box-sizing: border-box;
+    height: 80px;
+    line-height: 75px; /*Ajuste da altura da linha considerando também o tamanho da borda top para que o texto continue no centro*/
+}
+
+.menu ul li{
+    border-top: 3px solid rgb(224, 255, 255, 0);
+    transition: border-top 0.25s ease-in;
+}
+
+.menu ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-font-menu);
+}
+
+.menu ul li:hover,
+.menu ul li.active{
+    border-top: 3px solid var(--color-star-light);
+    text-shadow: var(--default-light);
+}
+
+.menu ul li.active a{
+    color: var(--color-star-light);
+}
+
+.menu ul li a:hover{
+    color: var(--color-star-light);
+    text-shadow: var(--default-light);  /*Adiciona uma sombra branca com opacidade para simular o brilho*/
+} 
+
