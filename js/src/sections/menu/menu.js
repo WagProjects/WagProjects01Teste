@@ -2,7 +2,7 @@ export function criarElementoMenu() {
     const menuNavegacao = document.createElement('nav');
     menuNavegacao.classList.add('menu');
     menuNavegacao.innerHTML = `
-        <img src="../../../public/assets/images/Logo-01.png" alt="Logo" />
+        <img src="./public/assets/images/Logo-01.png" alt="Logo" />
         <ul class="menu__nav">
             <li class="menu-button" data-target="section1" onclick="active(this)"><a href="#" title="Vá para o topo da página" onclick="scrollElemento('.container__geral', event)">Home</a></li>
             <li class="menu-button" data-target="section2" onclick="active(this)"><a href="#" title="Uma preve apresentação sobre mim" onclick="scrollElemento('.container__sobre', event)">Sobre</a></li>
