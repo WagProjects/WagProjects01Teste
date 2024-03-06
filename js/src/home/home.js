@@ -9,41 +9,35 @@ export function criarElementoSobre() {
     sectionSobre.classList.add('container__sobre');
     cardSobre.classList.add('card__sobre');
     sectionSobre.innerHTML = `
-        <img src="" alt="sobre" id="imagem__sobre" />
+        <video class="video__intro" loop="loop" muted="muted" autoplay>
+            <source src="../public/assets/images/Video-intro.mp4" type="video/mp4">
+        </video>
+        <h1 class="titulo__secao">Sobre</h1>
     `;
     cardSobre.innerHTML = `
             <aside>
                 <img src="./public/assets/images/Ultima.jpg" alt="Perfil" id="foto__perfil" />
                 <ul>
                     <li class="meu__nome">Wagner Oliveira</li>
-                    <li><img src="./public/assets/images/Icon-cap.svg" alt="Icone de Cap de Formando" />Desenvolvedor Front-End</li>
-                    <li><img src="./public/assets/images/Icon-email.svg" alt="Iconte de Email" /><a href="mailto:contato-wagneros@outlook.com">contato-wagneros@outlook.com</a></li>
+                    <li><img src="./public/assets/images/icons/Icon-cap.svg" alt="Icone de Cap de Formando" />Desenvolvedor Front-End</li>
+                    <li><img src="./public/assets/images/icons/Icon-email.svg" alt="Iconte de Email" /><a href="mailto:contato-wagneros@outlook.com">contato-wagneros@outlook.com</a></li>
                     <li><img src="./public/assets/images/Icon-whatsapp.svg" alt="Icone de Contato" /><a href="https://wa.me/5521992316655" target="_blank">+55 21 992316655</a></li>
                     <li><img id="icon__localiza" src="./public/assets/images/Icon-location-dot-solid.svg" alt="Icone de Localização" /><a href="https://wa.me/5521992316655" target="_blank">Rio de Janeiro, RJ - Brasil</a></li>
                 </ul>
             </aside>
             <div class="content">
                 <h1 align="center">Bem-vindo(a)</h1>
-                <p>Meu nome é Wagner, tenho 28 anos, formado em Análise e Desenvolvimento de Sistemas, amante de tecnologia, jogos e cultura geek.
-                Acredito fortemente que a educação e o conhecimento tem o poder de trazer realizações incríveis na área de tecnologia e por isso procuro sempre me desenvolver em minha área de formação. Assim, venho trabalhando em projetos em meu portfólio com o objetivo de agregar conhecimento e estar preparado para os desafios cotidianos de uma equipe de desenvolvimento.</p>
-                <p>Formação 👨‍🎓 ➡ Analise e Desenvolvimento de Sistemas.</p>
-                <p>Hard Skill 🧠 ➡</p>
-                <ul>
-                    <li> JavaScript </li>
+                <p>Sou formado em Análise e Desenvolvimento de sistemas, atuo como desenvolvedor front-end, este é meu portfólio!</p>
+                <p>Algumas tecnologias que tenho atuado em meus projetos:</p>
+                <ul class="content-tecnologias">
                     <li> HTML </li>
                     <li> CSS </li>
-                    <li> GIT </li>
+                    <li> JavaScript </li>
                     <li> TypeScript </li>
                     <li> React </li>
                     <li> React Native </li>
-                </ul>
-                <p>Soft Skill 🧠 ➡</p>
-                <ul>
-                    <li>Comunicação interpessoal </li>
-                    <li>Proatividade </li>
-                    <li>Resolução de conflitos </li>
-                    <li>Capacidade de trabalhar sob pressão </li>
-                    <li>Capacidade analítica </li>
+                    <li> GIT </li>
+                    <li> Figma </li>
                 </ul>
             </div>
         `;
@@ -56,10 +50,9 @@ export function criarElementoProjetos() {
     sectionProjetos.classList.add('container__projetos');
     cardProjetos.classList.add('card__projetos');
     sectionProjetos.innerHTML = `
-        <img src="" alt="projetos" id="imagem__projetos"/>
+        <h1 class="titulo__secao">Projetos</h1> 
     `;
     cardProjetos.innerHTML = `
-        <h1>Projetos</h1>
         <!-- Slider main container -->
         <div class="swiper">
             <!-- Additional required wrapper -->
@@ -77,16 +70,16 @@ export function criarElementoProjetos() {
                         </div>
                         <div class="aside-link">
                             <div>
-                                <span><img src="./public/assets/images/Icon-css3-alt.svg" /> HTML</span>
-                                <span><img src="./public/assets/images/Icon-html5.svg" /> CSS</span>
+                                <span><img src="./public/assets/images/icons/Icon-css3-alt.svg" /> HTML</span>
+                                <span><img src="./public/assets/images/icons/Icon-html5.svg" /> CSS</span>
                                 <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swiper/swiper-original.svg" /> Swiper JS</span>
                             </div>
                             <div>
                                 <span>
-                                    <a href="https://wagprojects.github.io/alura-books/" target="_blank"><img src="./public/assets/images/Icon-globe-solid.svg" /> Link</a>
+                                    <a href="https://wagprojects.github.io/alura-books/" target="_blank"><img src="./public/assets/images/icons/Icon-globe-solid.svg" /> Link</a>
                                 </span>
                                 <span>
-                                    <a href="https://github.com/WagProjects/alura-books" target="_blank"><img class="icon-github" src="./public/assets/images/Icon-square-github.svg" /> Repositório</a>
+                                    <a href="https://github.com/WagProjects/alura-books" target="_blank"><img class="icon-github" src="./public/assets/images/icons/Icon-square-github.svg" /> Repositório</a>
                                 </span>
                             </div>
                         </div>
@@ -236,4 +229,63 @@ export function criarElementoProjetos() {
     `;
     sectionProjetos.appendChild(cardProjetos);
     return sectionProjetos;
+}
+export function criarElementoEducacao() {
+    const sectionEducacao = document.createElement('section');
+    sectionEducacao.classList.add('container__educacao');
+    const cardEducacao = document.createElement('div');
+    cardEducacao.classList.add('card__educacao');
+    sectionEducacao.innerHTML = `
+        <h1 class="titulo__secao">Educação</h1>
+    `;
+    cardEducacao.innerHTML = `
+        <ul class="nav__educacao">
+            <li class="educacao__item-01">
+                <div class="educacao__background">
+                </div>
+                <div class="educacao__content">
+                    <h1>Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</h1>
+                    <p>2021-2023</p>
+                </div>
+            </li>
+            <li class="educacao__item-02">
+                <div class="educacao__background">
+                </div>
+                <div class="educacao__content">
+                    <h1>Desenvolva Aplicações Web com Javascript</h1>
+                    <span class="educacao__instituicao">
+                        <p><a href="https://cursos.alura.com.br/user/contato-wagneros/degree-javascript-front-end-687029/certificate" target="_blank"><img src="./public/assets/images/Icon-link-solid.svg"/>Alura</a></p>
+                        <p>2023</p>
+                    </span>
+                    <p>Formação: 8 cursos com carga horária estimada de 62 horas</p>
+                </div>
+            </li>
+            <li class="educacao__item-03">
+                <div class="educacao__background">
+                </div>
+                <div class="educacao__content">
+                    <h1>Melhore Sua Experiência de Desenvolvimento com Typescript</h1>
+                    <span class="educacao__instituicao">
+                        <p><a href="https://cursos.alura.com.br/user/contato-wagneros/degree-typescript-v309729-309729/certificate" target="_blank"><img src="./public/assets/images/Icon-link-solid.svg"/>Alura</a></p>
+                        <p>2023</p>
+                    </span>
+                    <p>Formação: 3 cursos com carga horária estimada em 31 horas.</p>
+                </div>
+            </li>
+            <li class="educacao__item-04">
+                <div class="educacao__background">
+                </div>
+                <div class="educacao__content">
+                    <h1>Desenvolva Aplicações Web em Javascript com Tarefas Concorrentes e Orientadas a Objetos</h1>
+                    <span class="educacao__instituicao">
+                        <p><a href="https://cursos.alura.com.br/user/contato-wagneros/degree-typescript-v309729-309729/certificate" target="_blank"><img src="./public/assets/images/Icon-link-solid.svg"/>Alura</a></p>
+                        <p>2023</p>
+                    </span>
+                    <p>Formação: 3 cursos com carga horária estimada em 23 horas.</p>
+                </div>
+            </li>
+        </ul>
+    `;
+    sectionEducacao.appendChild(cardEducacao);
+    return sectionEducacao;
 }
